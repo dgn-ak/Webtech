@@ -1,0 +1,21 @@
+/* --- Body --- */
+body{
+	background-color:  #fbf7f0;
+}
+
+/* --- Header --- */
+header h1{
+	color:  #b5451b;
+}
+
+header nav ul li a{
+	color: #b5451b;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* --- Main --- */
+main .kaart li:nth-child(odd){
+	background-color:  #f1e9dc;
+	
+}
