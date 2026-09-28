@@ -1,6 +1,6 @@
 # Labo 2 - reflecties
 
-Naam: (Alperen Kahraman Dogan)
+Naam: Alperen Kahraman Dogan
 
 ## 2. Selectors lezen
 
@@ -18,18 +18,20 @@ Vul de eerste twee kolommen in vóór je de pagina opent. Trede: herkomst, speci
 
 | vraag | mijn voorspelling (kleur) | beslissende trede | uitkomst in de browser | juist? |
 |---|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
-| 9 | | | | |
-| 10 | | | | |
+| 1 | green | herkomst | green | juist |
+| 2 | blue | volgorde | blue | juist |
+| 3 | blue | volgorde | red | fout |
+| 4 | red | volgorde | red | juist |
+| 5 | blue | volgorde | blue | juist |
+| 6 | blue | volgorde | blue | juist |
+| 7 | / | geen vermelding van classe | red | fout |
+| 8 | red | volgorde | blue | fout |
+| 9 | blue | volgorde | red | fout |
+| 10 | green | tweede gaf een error | green | juist |
 
 Bij welke vraag zat je fout, en wat was de reden? (Alles juist? Welke vraag duurde het langst, en waarom?)
+
+7 & 8 & 9, omdat er te veel verduidingen op andere manieren waren.
 
 ## 4. De nabouw
 
