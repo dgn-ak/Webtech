@@ -36,7 +36,9 @@ Bij welke vraag zat je fout, en wat was de reden? (Alles juist? Welke vraag duur
 ## 4. De nabouw
 
 - Welke selector koos je voor de links in de navigatie, en waarom geen class?
+Ik koos er voor om alles te vermelden zodat het duidelijk was waar die moest eindigen.
 - Welke regel kostte je het meeste tijd, en wat was uiteindelijk de oorzaak?
+Geen
 
 ## 6. Je site
 
