@@ -1,0 +1,59 @@
+/* stijl.css - labo 4, mondriaan (reset.css is linked before this file) */
+
+/* === tokens === */
+:root {
+	font-size: 62.5%;
+}
+
+/* === your rules === */
+body{
+	padding-top: 15vh;
+	padding-bottom: 15vh;
+}
+body .schilderij{
+	background-color: #2554ab;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 0.5rem;
+	width: 400px;
+  	height: 400px;
+  	margin: 0 auto;
+	padding: 0.5rem;
+}
+
+body main .lila{
+	background-color: #a090af;
+	grid-column: 1/4;
+	grid-row: 1/2;
+}
+
+body main .bruin{
+	background-color: #a16122;
+	grid-column: 4/5;
+	grid-row: 1/2;
+}
+
+body main .geel{
+	background-color: #e7c948;
+	grid-column: 1/2;
+	grid-row: 2/3;
+}
+
+body main .marine{
+	background-color: #13234e;
+	grid-column: 4/5;
+	grid-row: 2/3;
+}
+
+body main .olijf{
+	background-color: #ae9310;
+	grid-column: 1/4;
+	grid-row: 3/4;
+}
+
+body main .rood{
+	background-color: #cd2424;
+	grid-column: 4/5;
+	grid-row: 3/4;
+}
