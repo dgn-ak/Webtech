@@ -1,0 +1,33 @@
+/* stijl.css - labo 5, raster (reset.css is linked before this file) */
+
+/* === tokens === */
+:root {
+	font-size: 62.5%;
+}
+
+/* === your rules === */
+body main{
+	display: grid;
+    height: 100vh;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+body main .vlak{
+	color: white;
+    font-family: sans-serif;
+    font-size: 2.5rem;
+	display: grid;
+    place-items: start end;
+    padding-top: 0.5rem;
+	padding-right: 0.75rem;
+}
+
+div:nth-child(1) {background-color: #eb4f43;}
+div:nth-child(2) {background-color: #edd347; grid-column: 4/5;}
+div:nth-child(3) {background-color: #062f55;}
+div:nth-child(4) {background-color: #52a50f;}
+div:nth-child(5) {background-color: #f0aad7;}
+div:nth-child(6) {background-color: #a0f02f;}
+div:nth-child(7) {background-color: #ecc274;}
+div:nth-child(8) {background-color: #e9892f; grid-column: 4/5;}

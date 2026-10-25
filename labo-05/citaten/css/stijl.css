@@ -1,0 +1,79 @@
+/* stijl.css - labo 5, citaten (reset.css is linked before this file) */
+
+/* === tokens === */
+:root {
+	font-size: 62.5%;
+}
+
+/* === your rules === */
+.citaten{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 2rem;
+	gap:2rem;
+}
+
+.citaten .citaat p{
+	font-weight: bold;
+	font-family: Verdana;
+	font-size: 2.1rem;
+	padding-top: 2rem;
+
+	width: 400px;
+	height: 150px;
+}
+
+.citaten .citaat cite{
+	font-size: 1.5rem;
+}
+
+.citaten .blauw{
+	color: #1e5bd8;
+	border-left: 0.5rem solid #1e5bd8;
+	padding-left: 2rem
+}
+
+.citaten .roze{
+	color:  #e88bb4;
+	border-left: 0.5rem solid #e88bb4;
+	grid-column: 2/3;
+	padding-left: 2rem
+}
+
+.citaten .rood{
+	color: #c51f2a;
+	border-left: 0.5rem solid #c51f2a;
+	grid-column: 3/4;
+	padding-left: 2rem
+}
+
+.citaten .oranje{
+	color: #d98c1a;
+	border-left: 0.5rem solid #d98c1a;
+	grid-column: 4/5;
+	padding-left: 2rem
+}
+
+.citaten .groen{
+	color: #3b7a2a;
+	border-left: 0.5rem solid #3b7a2a;
+	padding-left: 2rem
+}
+
+.citaten .salie{
+	color: #8fb89a;
+	border-left: 0.5rem solid #8fb89a;
+	padding-left: 2rem
+}
+
+.citaten .paars{
+	color: #7b4fa3;
+	border-left: 0.5rem solid #7b4fa3;
+	padding-left: 2rem
+}
+
+.citaten .grijs{
+	color: #6b6b6b;
+	border-left: 0.5rem solid #6b6b6b;
+	padding-left: 2rem
+}
