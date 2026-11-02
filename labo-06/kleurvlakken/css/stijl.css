@@ -1,0 +1,56 @@
+/* stijl.css - labo 6, kleurvlakken (reset.css is linked before this file) */
+
+/* === tokens === */
+:root {
+	font-size: 62.5%;
+}
+
+/* === base: narrow screens first === */
+body main{
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+}
+
+body main div{
+	height: 50vh;
+}
+
+body main .rood{
+	background-color: #b90020;
+}
+
+body main .groen{
+	background-color: #349803;
+}
+
+body main .geel{
+	background-color: #ffcd00;
+}
+
+body main .blauw{
+	background-color: #006aff;
+}
+
+/* === media queries: below the base rules === */
+@media (max-width: 800px) {
+	body main{
+		display: grid;
+		grid-template-columns: repeat(4, 2fr);
+	}
+
+	body main div{
+		height: 100vh;
+	}
+}
+
+@media (max-width: 600px) {
+	body main{
+		display: grid;
+		grid-template-columns: 2fr;
+	}
+
+	body main div{
+		height: 25vh;
+	}
+}
+
