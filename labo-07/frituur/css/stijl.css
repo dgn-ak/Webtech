@@ -1,0 +1,147 @@
+/* stijl.css - labo 7, frituur (reset.css is linked before this file) */
+
+/* === tokens: five colour roles in hsl (7.7) === */
+:root {
+	color-scheme: light dark;
+	--text-s: 0.8rem;
+	--text-m: 1rem;
+	--text-l: 1.25rem;
+	--text-xl: 1.563rem;
+	--text-xxl: 1.953rem;
+	--text-xxxl: 2.441rem;
+	--space-xs: 0.25rem;
+	--space-s: 0.5rem;
+	--space-m: 1rem;
+	--space-l: 2rem;
+	--space-xl: 4rem; 
+	--light-oppervlak: hsl(45 60% 96%);
+	--light-inkt: hsl(25 30% 12%);
+	--light-gedempt: hsl(25 10% 40%);
+	--light-accent: hsl(22 85% 40%);
+	--light-lijn: hsl(40 25% 80%);
+}
+
+/* === base === */
+body{
+    max-width: 896px;
+    margin: 0 auto;
+	background-color: var(--light-oppervlak);
+	min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body header{
+	padding-top: var(--space-xl);
+	padding-bottom: var(--space-l);
+}
+
+body header .naam{
+	font-family: Georgia;
+	color: var(--light-accent);
+	font-size: var(--text-xxl);
+	text-align: center;
+	line-height: 1.1;
+}
+
+body header .slogan{
+	font-family: Verdana;
+	letter-spacing: 0.1rem;
+	padding-top: var(--space-xs);
+	color: var(--light-gedempt);
+	font-size: var(--text-s);
+	text-align: center;
+}
+
+body main{
+	
+	display: grid;
+	grid-template-columns: repeat(3, 2fr);
+	gap: 2rem;
+}
+
+body main section h2{
+	border-bottom: 2px solid var(--light-accent);
+	padding-bottom: var(--space-xs);
+	margin-bottom: var(--space-s);
+	font-size: var(--text-l);
+	line-height: 1.2;
+}
+
+body main section ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+body main section ul li{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	padding: var(--space-s) 0;
+    border-bottom: 1px dotted var(--light-gedempt);
+	font-size: var(--text-l);
+}
+
+body main section ul li .label{
+	background-color: var(--light-accent);
+	color: var(--light-oppervlak);
+	font-size: var(--text-s);
+	font-weight: bold;
+	font-style: normal;
+	padding: var(--space-xs);
+	border-radius: var(--space-xs);
+	text-transform: uppercase;
+	margin-left: var(--space-s);
+}
+
+body main section ul li .prijs{
+	color: var(--light-accent);
+	font-weight: bold;
+}
+
+body main .info{
+	border: 1px solid var(--light-gedempt);
+	border-radius: var(--space-s);
+	padding: var(--space-m);
+	grid-column: 1 / -1;
+}
+
+body main .info h2{
+	font-size: var(--text-l);
+	border-bottom: 2px solid var(--light-accent);
+	padding-bottom: var(--space-xs);
+	margin-bottom: var(--space-s);
+}
+
+body main .info .gedempt{
+	color: var(--light-gedempt);
+	font-size: var(--text-s);
+	padding-top: var(--space-m);
+}
+
+body footer{
+	margin-top: auto;
+	padding-top: var(--space-l);
+	padding-bottom: var(--space-l);
+	border-top: 1px solid var(--light-gedempt);
+	width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+
+body footer p{
+	text-align: center;
+	color: var(--licht-gedempt);
+}
+
+/* === dark mode: tokens only (7.9) === */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--light-oppervlak: hsl(25 15% 10%);
+		--light-inkt: hsl(40 30% 92%);
+		--light-gedempt: hsl(30 10% 70%);
+		--light-accent: hsl(32 90% 62%);
+		--light-lijn: hsl(25 10% 28%);
+		/* ...the other three roles, and nothing else */
+	}
+}

@@ -1,0 +1,154 @@
+/* stijl.css - labo 7, kaaien (reset.css is linked before this file) */
+
+/* === fonts === */
+@font-face {
+	font-family: "Fraunces";
+	src: url("font/fraunces-latin-wght-normal.woff2")  format("woff2");
+	font-weight: 100 900;
+	font-display: swap; ;
+}
+
+/* === tokens === */
+:root {
+	--font-heading: "Fraunces", Georgia, Verdana;
+	--text-s: 0.8rem;
+	--text-m: 1rem;
+	--text-l: 1.25rem;
+	--text-xl: 1.563rem;
+	--text-xxl: 1.953rem;
+	--text-xxxl: 2.441rem;
+	--space-xs: 0.25rem;
+	--space-s: 0.5rem;
+	--space-m: 1rem;
+	--space-l: 2rem;
+	--space-xl: 4rem; 
+	--oppervlak: hsl(200 30% 97%);
+	--inkt: hsl(205 40% 12%);
+	--gedempt: hsl(205 12% 40%);
+	--accent: hsl(200 70% 32%);
+	--lijn: hsl(200 20% 82%);
+	--donkere-vlak: rgb(0 0 0 / 0.55);
+}
+
+/* === base === */
+body{
+	background-color: var(--oppervlak);
+}
+
+/* === the hero: photo as background, text on a dark panel (7.10, F7.10) === */
+body .held{
+	 background-image: url("../afbeeldingen/kaaien.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 70svh;
+
+    display: flex;
+    align-items: flex-end;	
+}
+
+body .held .paneel{
+	background-color: var(--donkere-vlak);
+	color: var(--oppervlak);
+
+	margin: var(--space-m);
+	padding: var(--space-l);
+}
+
+body .held .paneel .bovenkop{
+	font-size: var(--text-s);
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+
+	margin-bottom: var(--space-s);
+}
+
+body .held .paneel h1{
+	line-height: 1.1;
+	font-size: var(--text-xxxl);
+	padding-bottom: var(--space-m);
+}
+
+body .held .paneel .lead{
+	margin-bottom: var(--space-l);
+}
+
+body .held .paneel .knop{
+	color: var(--oppervlak);
+	text-decoration: none;
+	background-color: var(--accent);
+	font-weight: bold;
+
+	padding-top: var(--space-s);
+	padding-left: var(--space-l);
+	padding-right: var(--space-l);
+	padding-bottom: var(--space-s);
+}
+
+body .held .paneel .knop:hover{
+	background-color: var(--oppervlak);
+	color: var(--accent);
+}
+
+/* === main, aside with a corner decoration, footer with a repeating tile === */
+body main{
+	padding-top: var(--space-xl);
+	padding-left: var(--space-m);
+	padding-right: var(--space-m);
+	padding-bottom: var(--space-xl);
+}
+
+body main .tekst{
+	padding-bottom: var(--space-l);
+}
+
+body main h2{
+	font-size: var(--text-xl);
+	color: var(--accent);
+
+	margin-bottom: var(--space-s);
+}
+
+body main .tekst p{
+	margin-bottom: var(--space-m);
+}
+
+body main .praktisch{
+	border: 1px solid var(--lijn);
+	padding: var(--space-m);
+	padding-bottom: var(--space-xl);
+
+	background-image: url("../afbeeldingen/kompas.png");
+	background-size: 8rem;
+	background-repeat: no-repeat;
+	background-position: right var(--space-m) bottom var(--space-m);
+}
+
+body main .praktisch ul{
+	gap: var(--space-xs);
+
+	padding-left: 1rem;
+    margin-left: 0;
+}
+
+body footer{
+	background-image: url("../afbeeldingen/golfjes.png");
+
+	border-top: 1px solid var(--lijn);
+	padding-top: var(--space-xl);
+	padding-bottom: var(--space-xl);
+}
+
+body footer p{
+	text-align: center;
+	font-size: var(--text-s);
+	color: var(--gedempt);
+	background-color: var(--oppervlak);
+
+	padding-top: var(--space-s);
+	padding-left: var(--space-m);
+	padding-right: var(--space-m);
+	padding-bottom: var(--space-s);
+}
