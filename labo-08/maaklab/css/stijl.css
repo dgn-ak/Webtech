@@ -1,0 +1,178 @@
+/* stijl.css - labo 8, maaklab (reset.css and fonts.css are linked before this file) */
+
+/* === tokens: colours, fonts, sizes, and one duration and one curve (8.1) === */
+:root {
+	--font-heading: "Atkinson Hyperlegible";
+	--text-s: 0.8rem;
+	--text-m: 1rem;
+	--text-l: 1.25rem;
+	--text-xl: 1.563rem;
+	--text-xxl: 1.953rem;
+	--text-xxxl: 2.441rem;
+	--space-xs: 0.25rem;
+	--space-s: 0.5rem;
+	--space-m: 1rem;
+	--space-l: 2rem;
+	--space-xl: 4rem;
+	--oppervlak: hsl(210 20% 97%);
+	--inkt: hsl(215 30% 14%);
+	--gedempt:  hsl(215 10% 42%);
+	--accent: hsl(215 70% 40%);
+	--accentvariant: hsl(215 70% 30%);
+	--lijn: hsl(210 15% 84%);
+	--duur: 200ms;
+	--curve: ease-out;
+	--hoeken: 0.5rem;
+}
+
+/* === base === */
+body{
+	background-color: var(--oppervlak);
+	font-family: var(--font-heading);
+}
+
+/* === header: links with an underline that grows from the left (8.3, 8.6) === */
+body .kop{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+	border-bottom: 1px solid var(--lijn);
+
+	padding-top: var(--space-m);
+	padding-left: var(--space-l);
+	padding-right: var(--space-l);
+	padding-bottom: var(--space-m);
+}
+
+body .kop .naam{
+	font-size: var(--text-l);
+	font-weight: bold;
+	color: var(--inkt);
+}
+
+body .kop nav ul{
+	display: flex;
+	gap: var(--space-m);
+	list-style: none;
+	justify-content: flex-end;
+}
+
+body .kop nav ul li a{
+	color: var(--inkt);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* === cards: transition on the base state (8.2), lift on hover and focus-within === */
+body main{
+	padding-top: var(--space-xl);
+	padding-left: var(--space-l);
+	padding-right: var(--space-l);
+	padding-bottom: var(--space-xl);
+}
+
+body main #workshops h2{
+	font-size: var(--text-xl);
+	margin-bottom: var(--space-l);
+}
+
+body main #workshops h2::after{
+	content: "";
+    display: block;
+    width: 3rem;
+    height: 0.25rem;
+    background-color: var(--accent);
+    margin-top: 0.5rem;
+}
+
+body main #workshops .kaarten{
+	display: grid;
+	grid-template-columns: repeat(4, minmax(16rem, 1fr));
+	list-style: none;
+	gap: var(--space-l);
+	padding: 0;
+    margin: 0;
+
+	transition:
+        background-color var(--duur) var(--curve),
+        transform var(--duur) var(--curve);
+}
+
+body main #workshops .kaarten .kaart{
+	background-color: #fff;
+	border: 1px solid var(--lijn);
+	border-radius: var(--hoeken);
+	padding: var(--space-m);
+
+	transition:
+        background-color var(--duur) var(--curve),
+        transform var(--duur) var(--curve);
+}
+
+body main #workshops .kaarten .kaart .datum{
+	color: var(--accent);
+	font-weight: bold;
+	font-size: var(--text-s);
+	text-transform: uppercase;
+	letter-spacing: 0.08rem;
+
+	padding-bottom: var(--space-s);
+}
+
+body main #workshops .kaarten .kaart h3{
+	font-size: var(--text-l);
+
+	padding-bottom: var(--space-s);
+}
+
+body main #workshops .kaarten .kaart p{
+	color: var(--gedempt);
+
+	padding-bottom: var(--space-l);
+}
+
+body main #workshops .kaarten .kaart .knop{
+	background-color: var(--accent);
+	border-radius: var(--hoeken);
+	color: var(--oppervlak);
+	text-decoration: none;
+
+	padding-top: var(--space-s);
+	padding-left: var(--space-l);
+	padding-right: var(--space-l);
+	padding-bottom: var(--space-s);
+}
+
+body main #workshops .kaarten .kaart .knop:hover,
+.kaart .knop:focus {
+    background-color: var(--accentvariant);
+}
+
+body main #workshops .kaarten .kaart:hover,
+body main #workshops .kaarten .kaart:focus-within {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 0.15);
+}
+
+/* === hover only where hovering exists (6.9) === */
+@media (hover: hover) {
+
+}
+
+/* === footer === */
+body #contact{
+	border-top: 1px solid var(--lijn);
+}
+
+body #contact p{
+	color: var(--gedempt);
+	font-size: var(--text-s);
+
+	padding-top: var(--space-m);
+	padding-left: var(--space-l);
+	padding-right: var(--space-l);
+	padding-bottom: var(--space-m);
+}
+
+/* === reduced motion (8.5) === */

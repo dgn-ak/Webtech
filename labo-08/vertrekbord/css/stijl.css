@@ -1,0 +1,165 @@
+/* stijl.css - labo 8, vertrekbord (reset.css and fonts.css are linked before this file) */
+
+/* === tokens: a dark board === */
+:root {
+	--font-heading: "Atkinson Hyperlegible";
+	--text-s: 0.8rem;
+	--text-m: 1rem;
+	--text-l: 1.25rem;
+	--text-xl: 1.563rem;
+	--text-xxl: 1.953rem;
+	--text-xxxl: 2.441rem;
+	--space-xs: 0.25rem;
+	--space-s: 0.5rem;
+	--space-m: 1rem;
+	--space-l: 2rem;
+	--space-xl: 4rem;
+	--oppervlak: hsl(210 30% 10%);
+	--inkt: hsl(45 30% 92%);
+	--gedempt:  hsl(210 10% 65%);
+	--accent: hsl(45 95% 55%);
+	--lijn: hsl(210 15% 25%);
+	--duur: 200ms;
+	--curve: ease-out;
+}
+
+/* === base: header, list, footer at the bottom (4.7) === */
+body{
+	background-color: var(--oppervlak);
+	font-family: var(--font-heading);
+	padding: var(--space-l);
+	height: 100svh;
+	position: relative;
+}
+
+body header .naam{
+	font-size: var(--text-s);
+	color: var(--gedempt);
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+}
+
+body header h1{
+	font-size: var(--text-xxl);
+	font-weight: bold;
+	line-height: 1.1;
+	color: var(--inkt);
+
+	padding-top: var(--space-s);
+	padding-bottom: var(--space-s);
+}
+
+body header .live{
+	font-size: var(--text-s);
+	color: var(--accent);
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	display: inline-flex;
+  	align-items: center;
+  	gap: var(--space-xs);
+}
+
+body main{
+	padding-top: var(--space-l);
+	color: var(--inkt);
+}
+
+body footer{
+	padding-top: var(--space-l);
+	position: absolute;
+    bottom: 0;
+    left: 0;
+
+	padding-left: var(--space-l);
+	padding-bottom: var(--space-l);
+}
+
+body footer p{
+	color: var(--gedempt);
+}
+/* === the live dot: a pseudo-element that pulses (8.4, 8.6) === */
+body header .live::before {
+  	content: "";
+  	width: 0.6em;
+  	height: 0.6em;
+  	border-radius: 50%;
+  	background: var(--accent);
+  	animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* === the departures === */
+body main .vertrekken{
+	list-style: none;
+
+	padding: 0;
+	margin: 0;
+}
+
+body main .vertrekken .vertrokken{
+	opacity: 0.45;
+}
+
+body main .vertrekken .vertrek{
+	border-bottom: 1px solid var(--lijn);
+	display: grid;
+  	grid-template-columns: 6rem 1fr max-content;
+
+	padding-top: var(--space-m);
+	padding-bottom: var(--space-m);
+}
+
+body main .vertrekken .vertrek .tijd{
+	font-size: var(--text-xl);
+	font-weight: bold;
+}
+
+body main .vertrekken .vertrek .naar{
+	font-size: var(--text-l);
+}
+
+body main .vertrekken .vertrek .status{
+	font-size: var(--text-s);
+	color: var(--gedempt);
+}
+
+body main .vertrekken .vertrek .extra{
+	color: var(--accent);
+}
+
+/* === the loading ring and the extra departure (8.4) === */
+body main .vertrekken .vertrek .laden::before{
+	content: "";
+  	width: 1em;
+  	height: 1em;
+  	border: 3px solid var(--lijn);
+  	border-top-color: var(--accent);
+  	border-radius: 50%;
+  	display: inline-block;
+  	margin-right: var(--space-xs);
+  	animation: draaien 1s linear infinite;
+}
+
+@keyframes draaien {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* === reduced motion (8.5) === */
+body main .vertrek .nieuw{
+	animation: binnenkomen 300ms var(--curve) forwards;
+}
+
+@keyframes binnenkomen {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
